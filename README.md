@@ -23,7 +23,7 @@ In this sample microservice, you will create an application using Gin complete w
 
 ## Steps
 
-You can [deploy this application to IBM Cloud](https://cloud.ibm.com/developer/appservice/starter-kits/68fb7fbd-13de-3e22-854f-1dfe50f9101e/go-web-app-with-gin) or [build it locally](#building-locally) by cloning this repo first.  Once your app is live, you can access the `/health` endpoint to build out your cloud native application.
+You can [deploy this application to IBM Cloud](https://cloud.ibm.com/developer/appservice/starter-kits/68fb7fbd-13de-3e22-854f-1dfe50f9101e/go-web-app-with-gin) or [build it locally](#building-locally) by cloning this repo first. Once your app is live, you can access the `/health` endpoint to build out your cloud native application.
 
 ### Deploying to IBM Cloud
 
@@ -80,7 +80,7 @@ ibmcloud dev build
 ibmcloud dev run
 ```
 
-This will launch your application locally.  When you are ready to deploy to IBM Cloud on Cloud Foundry or Kubernetes, run one of the commands below:
+This will launch your application locally. When you are ready to deploy to IBM Cloud on Cloud Foundry or Kubernetes, run one of the commands below:
 
 ```bash
 ibmcloud dev deploy -t buildpack
