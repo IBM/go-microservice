@@ -33,7 +33,7 @@ You can [deploy this application to IBM Cloud](https://cloud.ibm.com/developer/a
     </a>
 </p>
 
-Use the button above to deploy this same application to IBM Cloud.  This option will create a deployment pipeline, complete with a hosted Git lab project and DevOps toolchain.  You will have the option of deploying to either Cloud Foundry or a Kubernetes cluster. [IBM Cloud DevOps](https://www.ibm.com/cloud/devops) services provides toolchains as a set of tool integrations that support development, deployment, and operations tasks inside IBM Cloud. 
+Use the button above to deploy this same application to IBM Cloud. This option will create a deployment pipeline, complete with a hosted Git lab project and DevOps toolchain.  You will have the option of deploying to either Cloud Foundry or a Kubernetes cluster. [IBM Cloud DevOps](https://www.ibm.com/cloud/devops) services provides toolchains as a set of tool integrations that support development, deployment, and operations tasks inside IBM Cloud. 
 
 
 This microservice comes with the following capabilities:
@@ -52,7 +52,10 @@ All of your `dep` dependencies are stored inside of `Gopkg.toml`.
 - Install [Go](https://golang.org/dl/)
 - Install [dep](https://github.com/golang/dep)
 
-In order for Go applications to run locally, they must be placed in the correct file path. The application must exist in `$GOPATH/src/gostarter`
+In order for Go applications to run locally, they must be placed in the following path:
+```
+$GOPATH/src/gostarter
+```
 
 Once the Go toolchain has been installed, you can compile a Go project with:
 
@@ -71,7 +74,10 @@ Your sources will be compiled to your `$GOPATH/bin` directory. Your application 
 
 #### IBM Cloud Developer Tools
 
-Install [IBM Cloud Developer Tools](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started) on your machine by using the following installation command: `curl -sL https://ibm.biz/idt-installer | bash`.
+Install [IBM Cloud Developer Tools](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started) on your machine by running the following  command:
+```
+curl -sL https://ibm.biz/idt-installer | bash
+```
 
 Your application will be compiled with Docker containers. To compile and run your app, run:
 
@@ -80,7 +86,7 @@ ibmcloud dev build
 ibmcloud dev run
 ```
 
-This will launch your application locally. When you are ready to deploy to IBM Cloud on Cloud Foundry or Kubernetes, run one of the commands below:
+This will launch your application locally. When you are ready to deploy to IBM Cloud on Cloud Foundry or Kubernetes, run one of the following commands:
 
 ```bash
 ibmcloud dev deploy -t buildpack
