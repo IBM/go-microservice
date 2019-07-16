@@ -28,7 +28,7 @@ You can [deploy this application to IBM Cloud](https://cloud.ibm.com/developer/a
 ### Deploying to IBM Cloud
 
 <p align="center">
-    <a href="https://cloud.ibm.com/developer/appservice/starter-kits/68fb7fbd-13de-3e22-854f-1dfe50f9101e/go-web-app-with-gin">
+    <a href="https://cloud.ibm.com/developer/appservice/create-app?starterKit=a52f700e-8bc9-365f-9e42-a17311d9c62e">
     <img src="https://cloud.ibm.com/devops/setup/deploy/button_x2.png" alt="Deploy to IBM Cloud">
     </a>
 </p>
