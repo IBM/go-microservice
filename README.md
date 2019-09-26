@@ -54,19 +54,21 @@ All of your `dep` dependencies are stored inside of `Gopkg.toml`.
 
 In order for Go applications to run locally, they must be placed in the following path:
 ```
-$GOPATH/src/gostarter
+$GOPATH/src/gomicroservice
 ```
 
-Once the Go toolchain has been installed, you can compile a Go project with:
+Import dependencies from Gopkg.toml using dep:
+```bash
+dep ensure
+```
 
+Once the dependencies have been installed, you can compile a Go project with:
 ```bash
 go install
 ```
 
 To run your application locally:
-
 ```bash
-dep ensure
 go run server.go
 ```
 
@@ -74,10 +76,18 @@ Your sources will be compiled to your `$GOPATH/bin` directory. Your application 
 
 #### IBM Cloud Developer Tools
 
-Install [IBM Cloud Developer Tools](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started) on your machine by running the following  command:
+Install [IBM Cloud Developer Tools](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started) on your machine by running the following command:
 ```
 curl -sL https://ibm.biz/idt-installer | bash
 ```
+
+Create an application on IBM Cloud by running:
+
+```bash
+ibmcloud dev create
+```
+
+This will create and download a starter application with the necessary files needed for local development and deployment.
 
 Your application will be compiled with Docker containers. To compile and run your app, run:
 
@@ -86,11 +96,11 @@ ibmcloud dev build
 ibmcloud dev run
 ```
 
-This will launch your application locally. When you are ready to deploy to IBM Cloud on Cloud Foundry or Kubernetes, run one of the following commands:
+This will launch your application locally. When you are ready to deploy to IBM Cloud on Cloud Foundry or Kubernetes, run one of the commands:
 
 ```bash
-ibmcloud dev deploy -t buildpack
-ibmcloud dev deploy -t container
+ibmcloud dev deploy -t buildpack // to Cloud Foundry
+ibmcloud dev deploy -t container // to K8s cluster
 ```
 
 You can build and debug your app locally with:
