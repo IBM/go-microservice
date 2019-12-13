@@ -1,13 +1,12 @@
 package main
 
 import (
-	"gomicroservice/routers"
-	// "gomicroservice/plugins" if you create your own plugins import them here
-	"github.com/gin-gonic/gin"
+	"IBM/go-microservice/routers"
+	// "IBM/go-microservice/plugins" if you create your own plugins import them here
 	"github.com/gin-contrib/static"
+	"github.com/gin-gonic/gin"
 	log "github.com/sirupsen/logrus"
 	"os"
-	
 )
 
 func port() string {

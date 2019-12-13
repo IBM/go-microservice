@@ -47,26 +47,21 @@ This microservice comes with the following capabilities:
 
 To get started building this web application locally, you can either run the application natively or use the [IBM Cloud Developer Tools](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started) for containerization and easy deployment to IBM Cloud.
 
-All of your `dep` dependencies are stored inside of `Gopkg.toml`.
+All of your `go` dependencies are stored inside of `go.mod`.
 
 #### Native Application Development
 
 - Install [Go](https://golang.org/dl/)
-- Install [dep](https://github.com/golang/dep)
 
 In order for Go applications to run locally, they must be placed in the following path:
 ```
 $GOPATH/src/gomicroservice
 ```
 
-Import dependencies from Gopkg.toml using dep:
+Install dependencies from go modules:
 ```bash
-dep ensure
-```
-
-Once the dependencies have been installed, you can compile a Go project with:
-```bash
-go install
+export GO111MODULE=on
+go build ./...
 ```
 
 To run your application locally:
